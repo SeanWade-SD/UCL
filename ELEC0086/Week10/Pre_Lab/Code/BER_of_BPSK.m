@@ -7,6 +7,7 @@ function [BER] = BER_of_BPSK(total_bits, P)
 % Date          : 1 November 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all
+clc
 
 
 u=rand(total_bits,1);

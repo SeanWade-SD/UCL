@@ -8,6 +8,7 @@ function BER_SNR_BPSK(total_bits, PindB)
 % Date          : 1 November 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all
+clc
 
 
 P_dB = 1:PindB;

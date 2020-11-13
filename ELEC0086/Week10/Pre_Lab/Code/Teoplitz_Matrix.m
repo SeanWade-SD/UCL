@@ -6,6 +6,7 @@ function Teoplitz_Matrix(a,b)
 % Date          : 1 November 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all
+clc
 
 
 coloum = [a, zeros(1,length(b)-1)];
