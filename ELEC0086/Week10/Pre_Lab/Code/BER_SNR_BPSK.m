@@ -7,6 +7,8 @@ function BER_SNR_BPSK(total_bits, PindB)
 % Author        : Yiwei Xue
 % Date          : 1 November 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clear all
+
 
 P_dB = 1:PindB;
 P = 10.^(P_dB/10);

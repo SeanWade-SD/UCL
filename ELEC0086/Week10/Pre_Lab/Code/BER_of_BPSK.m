@@ -6,6 +6,8 @@ function [BER] = BER_of_BPSK(total_bits, P)
 % Author        : Yiwei Xue
 % Date          : 1 November 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clear all
+
 
 u=rand(total_bits,1);
 s(1:total_bits,1)=1;

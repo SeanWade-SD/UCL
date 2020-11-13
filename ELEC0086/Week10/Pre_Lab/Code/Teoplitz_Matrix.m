@@ -5,7 +5,7 @@ function Teoplitz_Matrix(a,b)
 % Author        : Yiwei Xue
 % Date          : 1 November 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+clear all
 
 
 coloum = [a, zeros(1,length(b)-1)];
