@@ -12,7 +12,7 @@ title('BPSK');
 
 % generate a random sequence of N QPSK symbols {±1±j}
 u2 = randi([0 3],N,1);
-s2 = qammod(u2,4);
+s2 = sqrt(2).*pskmod(u2,4,pi/4);
 scatterplot(s2);
 title('QPSK');
 
