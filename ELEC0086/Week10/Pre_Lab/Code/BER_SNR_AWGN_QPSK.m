@@ -12,6 +12,10 @@ for SNR = 0:1:SNR_MAX
     % generate a sequence of N QPSK symbols with normalised energy (x)
     u = randi([0 3],N,1);
     x = qammod(u,4);
+    Pav = mean(abs(x).^2);
+    s = x./sqrt(Pav);
+    
+    % normalize the energy of signal x
 
     % generate a sequence of N Gaussian noise samples (mean 0, variance s2) (n)
     sigma = 10.^(SNR/(-20)); %standard deviation
@@ -20,7 +24,7 @@ for SNR = 0:1:SNR_MAX
     % generate a sequence of noisy received signal samples (y = x + n)
     %     y = awgn(x,SNR);
 
-    y = x + n;
+    y = s + n;
 
     % count the number of detection errors and evaluate the BER of the system
     yd = qamdemod(y,4);
