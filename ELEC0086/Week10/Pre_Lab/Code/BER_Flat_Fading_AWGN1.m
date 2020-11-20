@@ -11,6 +11,7 @@ function BER_Flat_Fading_AWGN1(N,Nch,mType,SNR_Max_dB)
 % case 16: 16QAM
 % case 64: 64QAM
 % SNR_Max_dB indicates the largest signal niose ratio in dB
+clear
 clc
 
 M = log2(mType); %number of bits per symbol

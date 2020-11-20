@@ -6,7 +6,7 @@ function [BER] = BER_of_BPSK(total_bits, P)
 % Author        : Yiwei Xue
 % Date          : 1 November 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-clear all
+clear 
 clc
 
 
