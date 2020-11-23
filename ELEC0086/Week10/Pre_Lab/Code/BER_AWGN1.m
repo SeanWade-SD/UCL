@@ -28,8 +28,8 @@ for m = 1:L
     
 %     sDetect = ones(1,N);
    
-    r1 = repmat(r,mType,1);
-    r2 = abs(r1 - c.');
+%     r1 = repmat(r,mType,1);
+    r2 = abs(r - c.');
     [~, index] = min(r2,[],1);
     sDetect = c(index);
     
