@@ -82,34 +82,26 @@ $$
 optical\quad bandwidth\quad\Delta f
 $$
 
-
 ## Receiver Sensitivity
 
-$$
-R = 10\cdot log_{10}(k\cdot T\cdot B_e) + NF+SNR
-$$
+- The ***receiver sensitivity*** is defined as the <u>minimum average power</u> required at the receiver to <u>maintain a certain bit error rate</u> (BER). Often today required BERs are >$10^{-12}$ (one error per $10^{12}$ bits) although often in text books $10^{-9} $ is still used.
 
-- S: receiver sensitivity, in ***dBm***. A smaller value indicates better performance of the receiver. A larger value indicates lower performance of the receiver.
+- Will be specified for a certain wavelength
 
-- k: Boltzmann constant, in J/K.
+- Is dependent on noise power therefore it also depends on the bandwidth, thus the bit rate.
+  - The thermal noise can be expressed as: $\sigma_{thermal}=\sqrt{\frac{4\cdot k_B\cdot T\cdot\Delta f}{R}} $ 
+  - The shot noise can be expressed as: $\sigma_{shot}=\sqrt{2\cdot q\cdot I\cdot\Delta f}$
+  - $\Delta f$ is the same as $B_e$ representing bandwidth in Hz
+  - $q$ is the same as $e$ representing electronic charge $1.6\cdot 10^{-19} C$ 
 
-- T: absolute temperature, in K. As the temperature increases, receiver sensitivity becomes larger, degrading receiver performance. Therefore, lower the ambient temperature as much as possible.
+- Since the SNR is related to $10\cdot log_{10}(\frac{P_o}{\sigma})$ , where $P_o$ is the power of signal and $\sigma$ is the noise,
 
-- $$
-  B_e =  Electrical\quad Bandwidth
-  $$
+  the SNR is proportional with $\frac{1}{\sqrt{\Delta f}}$ , which means that the $P_o$ should be increased by $\sqrt{\alpha}$ when the bandwidth is up to  $\alpha\cdot\Delta f$ , to keep the bit rate stationary. Therefore, the receiver sensitivity in dB should be added by $10\cdot log_{10}(\sqrt{\alpha})$ if the transmit bit rate changes. 
 
-  ***signal bandwidth(in Hz)***. or ***bit rate(in bits per second)***. Higher signal bandwidth represents a larger NF, higher receiver sensitivity, and therefore lower receiver performance.
+  - ***In the receiver***, the ***bandwidth*** of the signal is set to be the same as ***bit rate $(B)$***
+  - ***In the fiber***, the ***bandwidth*** of signal is set to be ***twice the bit rate $(2B)$***
 
-- $$
-  k\cdot T\cdot B\quad thermal noise power within the bandwidth range, in Watts.
-  $$
-
-- NF: noise factor, in dB.
-
-- SNR: signal-to-noise ratio required for decoding signals, in dB. A small value of the minimum SNR can enhance receiver performance. The minimum SNR is related to the STA moving speed, wireless environment, and required communication quality. Minimum SNR requirements are different for wireless standards and services of the same wireless standard.
-
-
+  
 
 ## Relationship between Linewidth and Bandwidth
 
@@ -134,7 +126,7 @@ $$
 $$
 
 $$
-the\quad unit\quad of\quad\Delta f\quad  is\quad bit/s\quad or\quad Hz
+the\quad unit\quad of\quad   bandwidth\quad \Delta f\quad is\quad Hz
 $$
 
 $$
@@ -196,16 +188,16 @@ Pulse\quad spreading:\quad\Delta\tau=\Delta\lambda\cdot D\cdot L
 $$
 
 $$
-\Delta\tau\approx3\cdot T
+1\quad dB\quad power\quad penalty:\quad\Delta\tau\approx0.3\cdot T
 $$
 
 $$
 Symbol\quad duration:\quad T=1/B\quad (B\quad is\quad bit\quad rate)
 $$
 
-A perfect, zero linewidth, source when modulated at bit rate B has spectral width ~ 2B – corresponding to 100% raised cosine filtering.
+A perfect, zero linewidth, source when modulated at bit rate B has spectral width ~ 2B – corresponding to 100% raised cosine filtering. 
 
-Note: there are two line widths, one is source linewidth (unit is Hz) and another is linewidth for transmission (unit is nm)
+
 
 
 
